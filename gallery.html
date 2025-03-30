@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - French History</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Gallery specific styles */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 60px 0;
+        }
+        
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 15px;
+            position: relative;
+            aspect-ratio: 1 / 1;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+        
+        .gallery-caption h3 {
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+        
+        .gallery-caption p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* Lightbox styles */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+        
+        .lightbox-content {
+            position: relative;
+            max-width: 80%;
+            max-height: 80vh;
+        }
+        
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 80vh;
+            border: 3px solid white;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .lightbox-content p {
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .lightbox-close:hover {
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-wrapper">
+        <div class="bg-overlay"></div>
+    </div>
+
+    <header>
+        <nav class="glass-nav">
+            <div class="container">
+                <div class="logo">
+                    <h1>French History</h1>
+                </div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="timeline.html">Timeline</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content glass-card" data-aos="fade-up">
+                    <h1>Historical Image Gallery</h1>
+                    <p>Explore visual representations of key moments in French history</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="gallery-container">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item glass-card" data-aos="fade-up">
+                    <img src="images/placeholder-gaul.jpg" alt="Conquest of Gaul">
+                    <div class="gallery-caption">
+                        <h3>Vercingetorix surrenders to Caesar</h3>
+                        <p>The Battle of Alesia, 52 BCE</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/placeholder-joan.jpg" alt="Joan of Arc">
+                    <div class="gallery-caption">
+                        <h3>Joan of Arc at the Siege of Orléans</h3>
+                        <p>Hundred Years' War, 1429</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/placeholder-renaissance.jpg" alt="French Renaissance">
+                    <div class="gallery-caption">
+                        <h3>François I and Leonardo da Vinci</h3>
+                        <p>French Renaissance, 16th Century</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item glass-card" data-aos="fade-up">
+                    <img src="images/placeholder-versailles.jpg" alt="Palace of Versailles">
+                    <div class="gallery-caption">
+                        <h3>The Palace of Versailles</h3>
+                        <p>Built during Louis XIV's reign, 17th Century</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/placeholder-revolution.jpg" alt="French Revolution">
+                    <div class="gallery-caption">
+                        <h3>Storming of the Bastille</h3>
+                        <p>French Revolution, July 14, 1789</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/placeholder-napoleon.jpg" alt="Napoleon Bonaparte">
+                    <div class="gallery-caption">
+                        <h3>Napoleon at the Battle of Waterloo</h3>
+                        <p>June 18, 1815</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item glass-card" data-aos="fade-up">
+                    <img src="images/placeholder-eiffel.jpg" alt="Eiffel Tower">
+                    <div class="gallery-caption">
+                        <h3>Construction of the Eiffel Tower</h3>
+                        <p>1887-1889</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/placeholder-ww1.jpg" alt="World War I">
+                    <div class="gallery-caption">
+                        <h3>French Soldiers in the Trenches</h3>
+                        <p>World War I, 1914-1918</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 9 -->
+                <div class="gallery-item glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/placeholder-liberation.jpg" alt="Liberation of Paris">
+                    <div class="gallery-caption">
+                        <h3>Liberation of Paris</h3>
+                        <p>World War II, August 25, 1944</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 10 -->
+                <div class="gallery-item glass-card" data-aos="fade-up">
+                    <img src="images/placeholder-may68.jpg" alt="May 1968 Protests">
+                    <div class="gallery-caption">
+                        <h3>Student Protests in Paris</h3>
+                        <p>May 1968</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 11 -->
+                <div class="gallery-item glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/placeholder-eu.jpg" alt="European Union">
+                    <div class="gallery-caption">
+                        <h3>France and European Integration</h3>
+                        <p>Signing of the Maastricht Treaty, 1992</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 12 -->
+                <div class="gallery-item glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/placeholder-modern.jpg" alt="Modern France">
+                    <div class="gallery-caption">
+                        <h3>Modern Paris Skyline</h3>
+                        <p>21st Century France</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="glass-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>French History</h3>
+                    <p>Exploring the past, understanding the present</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="timeline.html">Timeline</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 French History Project. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline - French History</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Timeline specific styles */
+        .timeline-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 0;
+        }
+        
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background: linear-gradient(to bottom, #3498db, #2980b9);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: #fff;
+            border: 4px solid #3498db;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            left: 50%;
+        }
+        
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid rgba(255, 255, 255, 0.3);
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent rgba(255, 255, 255, 0.3);
+        }
+        
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid rgba(255, 255, 255, 0.3);
+            border-width: 10px 10px 10px 0;
+            border-color: transparent rgba(255, 255, 255, 0.3) transparent transparent;
+        }
+        
+        .right::after {
+            left: -16px;
+        }
+        
+        @media screen and (max-width: 992px) {
+            .timeline-container::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::before {
+                left: 60px;
+                border: medium solid rgba(255, 255, 255, 0.3);
+                border-width: 10px 10px 10px 0;
+                border-color: transparent rgba(255, 255, 255, 0.3) transparent transparent;
+            }
+            
+            .left::after, .right::after {
+                left: 15px;
+            }
+            
+            .right {
+                left: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-wrapper">
+        <div class="bg-overlay"></div>
+    </div>
+
+    <header>
+        <nav class="glass-nav">
+            <div class="container">
+                <div class="logo">
+                    <h1>French History</h1>
+                </div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="timeline.html" class="active">Timeline</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content glass-card" data-aos="fade-up">
+                    <h1>French History Timeline</h1>
+                    <p>Explore the major events that shaped France from ancient Gaul to modern times</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="timeline-container">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item left" data-aos="fade-right">
+                <div class="glass-card">
+                    <h2>58-50 BCE</h2>
+                    <h3>Conquest of Gaul</h3>
+                    <p>Julius Caesar conquers Gaul, bringing the region under Roman control. The decisive Battle of Alesia (52 BCE) marks the defeat of Vercingetorix and the Gallic tribes.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item right" data-aos="fade-left">
+                <div class="glass-card">
+                    <h2>486 CE</h2>
+                    <h3>Clovis I Unites the Franks</h3>
+                    <p>Clovis I becomes the first king to unite all Frankish tribes, establishing the Merovingian dynasty and converting to Christianity.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item left" data-aos="fade-right">
+                <div class="glass-card">
+                    <h2>800 CE</h2>
+                    <h3>Charlemagne Crowned Emperor</h3>
+                    <p>Charlemagne (Charles the Great) is crowned Emperor of the Romans by Pope Leo III, creating what would later be known as the Holy Roman Empire.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 4 -->
+            <div class="timeline-item right" data-aos="fade-left">
+                <div class="glass-card">
+                    <h2>1337-1453</h2>
+                    <h3>The Hundred Years' War</h3>
+                    <p>A series of conflicts between England and France over succession to the French throne. Joan of Arc emerges as a pivotal figure, helping turn the tide in favor of France.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 5 -->
+            <div class="timeline-item left" data-aos="fade-right">
+                <div class="glass-card">
+                    <h2>16th Century</h2>
+                    <h3>French Renaissance</h3>
+                    <p>France experiences a cultural and artistic revival, with the spread of Renaissance ideas and humanist philosophy transforming art, literature, and intellectual thought.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 6 -->
+            <div class="timeline-item right" data-aos="fade-left">
+                <div class="glass-card">
+                    <h2>1643-1715</h2>
+                    <h3>Reign of Louis XIV</h3>
+                    <p>The "Sun King" rules for 72 years, the longest reign in European history. He centralizes power, builds the Palace of Versailles, and establishes France as the dominant European power.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 7 -->
+            <div class="timeline-item left" data-aos="fade-right">
+                <div class="glass-card">
+                    <h2>1789-1799</h2>
+                    <h3>French Revolution</h3>
+                    <p>A period of radical social and political upheaval that overthrows the monarchy, establishes a republic, and dramatically transforms French society.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 8 -->
+            <div class="timeline-item right" data-aos="fade-left">
+                <div class="glass-card">
+                    <h2>1804-1815</h2>
+                    <h3>Napoleonic Era</h3>
+                    <p>Napoleon Bonaparte crowns himself Emperor and dominates European affairs until his final defeat at the Battle of Waterloo in 1815.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 9 -->
+            <div class="timeline-item left" data-aos="fade-right">
+                <div class="glass-card">
+                    <h2>1870-1940</h2>
+                    <h3>Third Republic</h3>
+                    <p>France's longest-lasting constitutional system, established after the fall of Napoleon III. This period includes the Belle Époque, World War I, and the interwar years.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 10 -->
+            <div class="timeline-item right" data-aos="fade-left">
+                <div class="glass-card">
+                    <h2>1940-1944</h2>
+                    <h3>Vichy France & Resistance</h3>
+                    <p>During World War II, France is occupied by Nazi Germany. The Vichy regime collaborates with the occupiers while the Resistance fights against them.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 11 -->
+            <div class="timeline-item left" data-aos="fade-right">
+                <div class="glass-card">
+                    <h2>1944-1958</h2>
+                    <h3>Fourth Republic</h3>
+                    <p>Post-war reconstruction and the beginning of decolonization, including the First Indochina War and the start of the Algerian War.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 12 -->
+            <div class="timeline-item right" data-aos="fade-left">
+                <div class="glass-card">
+                    <h2>1958-Present</h2>
+                    <h3>Fifth Republic</h3>
+                    <p>Established by Charles de Gaulle, this constitutional system continues to the present day. Key events include May 1968 protests, the end of the colonial empire, and France's role in European integration.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="glass-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>French History</h3>
+                    <p>Exploring the past, understanding the present</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="timeline.html">Timeline</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 French History Project. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
