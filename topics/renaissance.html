@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Renaissance & Humanism - French History</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Topic page specific styles */
+        .topic-hero {
+            height: 50vh;
+            background-image: url('../images/placeholder-renaissance.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .topic-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.8) 100%);
+            z-index: 1;
+        }
+        
+        .topic-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .topic-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .topic-hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        
+        .topic-content {
+            padding: 50px 0;
+        }
+        
+        .topic-section {
+            margin-bottom: 60px;
+        }
+        
+        .topic-section h2 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .topic-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #3498db;
+        }
+        
+        .topic-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #444;
+        }
+        
+        .topic-image-container {
+            margin: 30px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .topic-image-container img {
+            width: 100%;
+            display: block;
+        }
+        
+        .topic-quote {
+            font-style: italic;
+            font-size: 1.3rem;
+            color: #555;
+            border-left: 4px solid #3498db;
+            padding-left: 20px;
+            margin: 30px 0;
+        }
+        
+        .topic-fact-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .topic-fact-box h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .topic-fact-box ul {
+            padding-left: 20px;
+        }
+        
+        .topic-fact-box li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .back-to-topics {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 30px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .back-to-topics i {
+            margin-right: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .back-to-topics:hover {
+            color: #2980b9;
+        }
+        
+        .back-to-topics:hover i {
+            transform: translateX(-5px);
+        }
+        
+        @media (max-width: 768px) {
+            .topic-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .topic-hero p {
+                font-size: 1rem;
+            }
+            
+            .topic-section h2 {
+                font-size: 1.8rem;
+            }
+            
+            .topic-quote {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-wrapper">
+        <div class="bg-overlay"></div>
+    </div>
+
+    <header>
+        <nav class="glass-nav">
+            <div class="container">
+                <div class="logo">
+                    <h1>French History</h1>
+                </div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../timeline.html">Timeline</a></li>
+                    <li><a href="../gallery.html">Gallery</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="topic-hero">
+            <div class="topic-hero-content">
+                <h1>The Renaissance & Humanism in France</h1>
+                <p>The cultural and artistic movement that flourished in France during the 16th century, transforming art and thought.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <a href="../index.html#topics" class="back-to-topics"><i class="fas fa-arrow-left"></i> Back to Topics</a>
+            
+            <div class="topic-content glass-card">
+                <div class="topic-section">
+                    <h2>Origins of the French Renaissance</h2>
+                    <p>The Renaissance in France began in the late 15th century, later than in Italy, and reached its peak during the 16th century. The movement was significantly influenced by the Italian Renaissance, particularly after King Charles VIII's invasion of Italy in 1494, which exposed French nobility and intellectuals to Italian art, architecture, and humanist ideas.</p>
+                    
+                    <p>The French Renaissance was further accelerated by the reign of Francis I (1515-1547), who was a great patron of the arts and learning. He invited Italian artists, including Leonardo da Vinci, to his court and established the Collège de France in 1530 to promote the study of Greek, Hebrew, and mathematics, subjects that were not taught at the traditional Sorbonne.</p>
+                    
+                    <div class="topic-image-container">
+                        <img src="../images/placeholder-renaissance.jpg" alt="French Renaissance Art">
+                    </div>
+                </div>
+                
+                <div class="topic-section">
+                    <h2>Humanism in France</h2>
+                    <p>Humanism, a philosophical and intellectual movement that emphasized the value of human beings and their capacities, found fertile ground in France. French humanists sought to reconcile classical learning with Christian faith and to apply the wisdom of antiquity to contemporary problems.</p>
+                    
+                    <p>Key figures in French humanism included Jacques Lefèvre d'Étaples, who worked on reconciling Aristotelian philosophy with Christian theology, and Guillaume Budé, a classical scholar who encouraged Francis I to establish the Collège de France and the royal library that would later become the Bibliothèque Nationale.</p>
+                    
+                    <p>Perhaps the most influential French humanist was Michel de Montaigne (1533-1592), whose <em>Essays</em> explored human nature and morality through a skeptical lens. Montaigne's work emphasized the limitations of human knowledge and the importance of self-examination, ideas that would profoundly influence Western philosophy.</p>
+                    
+                    <div class="topic-quote">
+                        "The most certain sign of wisdom is cheerfulness." — Michel de Montaigne
+                    </div>
+                </div>
+                
+                <div class="topic-section">
+                    <h2>Art and Architecture</h2>
+                    <p>The French Renaissance saw a flourishing of artistic expression that combined Italian influences with distinctly French elements. In architecture, the châteaux of the Loire Valley exemplify the French Renaissance style, with their symmetrical designs, classical details, and integration with the surrounding landscape.</p>
+                    
+                    <p>Château de Chambord, commissioned by Francis I, is perhaps the most iconic example, featuring a distinctive French roofline with elaborate chimneys and dormers, combined with classical Italian elements in its plan and decoration. Other notable châteaux include Chenonceau, Amboise, and Blois.</p>
+                    
+                    <p>In painting, the School of Fontainebleau, established by Italian artists brought to France by Francis I, developed a distinctive style characterized by elongated figures, complex compositions, and mythological subjects. Jean Clouet and his son François Clouet were prominent portrait painters who captured the likenesses of the French royal family and nobility with remarkable precision and psychological insight.</p>
+                    
+                    <div class="topic-fact-box">
+                        <h3>Key Renaissance Châteaux in France</h3>
+                        <ul>
+                            <li><strong>Château de Chambord</strong> - The largest château in the Loire Valley, known for its distinctive French Renaissance architecture and double-helix staircase attributed to Leonardo da Vinci</li>
+                            <li><strong>Château de Chenonceau</strong> - Known as the "Ladies' Château" due to its association with several powerful women, it features a unique gallery that spans the River Cher</li>
+                            <li><strong>Château d'Amboise</strong> - A royal residence where Leonardo da Vinci spent his final years and is buried in the chapel</li>
+                            <li><strong>Château de Blois</strong> - Notable for its four distinct architectural styles, including a wing built by Francis I that exemplifies French Renaissance design</li>
+                            <li><strong>Château de Fontainebleau</strong> - A large royal château that housed the School of Fontainebleau and influenced French art for generations</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="topic-section">
+                    <h2>Literature and Language</h2>
+                    <p>The Renaissance in France coincided with a significant development in French literature and language. In 1539, Francis I issued the Ordinance of Villers-Cotterêts, which made French (rather than Latin) the official language for all legal and administrative documents, thereby promoting the standardization and development of the French language.</p>
+                    
+                    <p>The poet Joachim du Bellay, in his manifesto <em>Defense and Illustration of the French Language</em> (1549), argued for the literary potential of French and encouraged writers to enrich the language by creating new words and adapting classical forms. The Pléiade, a group of seven poets including du Bellay and Pierre de Ronsard, sought to elevate French poetry to the level of classical literature.</p>
+                    
+                    <p>François Rabelais, a humanist, physician, and writer, produced satirical works such as <em>Gargantua and Pantagruel</em>, which combined earthy humor with serious discussions of education, religion, and politics. His work exemplified the Renaissance spirit of inquiry and challenged medieval scholasticism.</p>
+                    
+                    <div class="topic-quote">
+                        "Science without conscience is but the ruin of the soul." — François Rabelais
+                    </div>
+                </div>
+                
+                <div class="topic-section">
+                    <h2>Religious Reform and Conflict</h2>
+                    <p>The Renaissance in France coincided with the Protestant Reformation, which found adherents among French humanists who sought to reform the Catholic Church. John Calvin, a French theologian, developed a form of Protestantism that gained significant following in France, where his followers were known as Huguenots.</p>
+                    
+                    <p>The spread of Protestantism in France led to religious tensions and eventually to the French Wars of Religion (1562-1598), a series of civil wars that devastated the country. The conflict was temporarily resolved by the Edict of Nantes (1598), issued by King Henry IV, which granted limited religious freedom to Protestants.</p>
+                    
+                    <p>Despite these conflicts, the Renaissance spirit of inquiry and the humanist emphasis on education and critical thinking continued to influence French intellectual life, laying the groundwork for the Scientific Revolution and the Enlightenment in the following centuries.</p>
+                </div>
+                
+                <div class="topic-section">
+                    <h2>Legacy and Influence</h2>
+                    <p>The French Renaissance left a lasting legacy on French culture and society. The architectural innovations of the period can still be seen in the châteaux of the Loire Valley and in buildings throughout France. The literary works of Montaigne, Rabelais, and the Pléiade poets continue to be studied and admired for their artistic merit and philosophical insights.</p>
+                    
+                    <p>The humanist emphasis on education and critical thinking influenced the development of French intellectual life and contributed to France's role as a center of the Enlightenment in the 18th century. The standardization of the French language during this period helped to establish French as a language of diplomacy and culture throughout Europe.</p>
+                    
+                    <p>Perhaps most importantly, the Renaissance in France fostered a spirit of inquiry and innovation that continues to characterize French culture. The blend of classical influences with distinctly French elements that defined the French Renaissance remains a hallmark of French art, architecture, and literature to this day.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="glass-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>French History</h2>
+                    <p>Exploring the rich tapestry of events that shaped modern France</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../timeline.html">Timeline</a></li>
+                        <li><a href="../gallery.html">Gallery</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p>Email: info@frenchhistory.edu</p>
+                    <p>Phone: +33 1 23 45 67 89</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 French History Project. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

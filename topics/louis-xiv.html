@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louis XIV (The Sun King) - French History</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Topic page specific styles */
+        .topic-hero {
+            height: 50vh;
+            background-image: url('../images/placeholder-louis.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .topic-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.8) 100%);
+            z-index: 1;
+        }
+        
+        .topic-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .topic-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .topic-hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        
+        .topic-content {
+            padding: 50px 0;
+        }
+        
+        .topic-section {
+            margin-bottom: 60px;
+        }
+        
+        .topic-section h2 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .topic-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #3498db;
+        }
+        
+        .topic-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #444;
+        }
+        
+        .topic-image-container {
+            margin: 30px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .topic-image-container img {
+            width: 100%;
+            display: block;
+        }
+        
+        .topic-quote {
+            font-style: italic;
+            font-size: 1.3rem;
+            color: #555;
+            border-left: 4px solid #3498db;
+            padding-left: 20px;
+            margin: 30px 0;
+        }
+        
+        .topic-fact-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .topic-fact-box h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .topic-fact-box ul {
+            padding-left: 20px;
+        }
+        
+        .topic-fact-box li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .back-to-topics {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 30px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .back-to-topics i {
+            margin-right: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .back-to-topics:hover {
+            color: #2980b9;
+        }
+        
+        .back-to-topics:hover i {
+            transform: translateX(-5px);
+        }
+        
+        @media (max-width: 768px) {
+            .topic-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .topic-hero p {
+                font-size: 1rem;
+            }
+            
+            .topic-section h2 {
+                font-size: 1.8rem;
+            }
+            
+            .topic-quote {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-wrapper">
+        <div class="bg-overlay"></div>
+    </div>
+
+    <header>
+        <nav class="glass-nav">
+            <div class="container">
+                <div class="logo">
+                    <h1>French History</h1>
+                </div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../timeline.html">Timeline</a></li>
+                    <li><a href="../gallery.html">Gallery</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="topic-hero">
+            <div class="topic-hero-content">
+                <h1>Louis XIV (The Sun King)</h1>
+                <p>The 72-year reign of the Sun King, who built Versailles and established France as Europe's dominant power.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <a href="../index.html#topics" class="back-to-topics"><i class="fas fa-arrow-left"></i> Back to Topics</a>
+            
+            <div class="topic-content glass-card">
+                <div class="topic-section">
+                    <h2>Early Life and Ascension to the Throne</h2>
+                    <p>Louis XIV was born on September 5, 1638, to King Louis XIII and Anne of Austria. His birth was considered miraculous, as the royal couple had been childless for 23 years, earning him the nickname "Louis the God-Given" (Louis Dieudonné). When his father died in 1643, Louis XIV inherited the throne at the age of four, with his mother serving as regent alongside her chief minister, Cardinal Mazarin.</p>
+                    
+                    <p>The young king's childhood was marked by the turmoil of the Fronde, a series of civil wars in France between 1648 and 1653. These rebellions by the nobility and the parlements (courts of law) against the growing power of the monarchy would profoundly influence Louis's later approach to governance. Having experienced the humiliation of being forced to flee Paris during the unrest, Louis developed a deep distrust of the nobility and a determination to assert absolute royal authority.</p>
+                    
+                    <div class="topic-image-container">
+                        <img src="../images/placeholder-louis.jpg" alt="Portrait of Louis XIV">
+                    </div>
+                </div>
+                
+                <div class="topic-section">
+                    <h2>Personal Rule and Absolute Monarchy</h2>
+                    <p>Upon Cardinal Mazarin's death in 1661, the 22-year-old Louis XIV announced his intention to rule without a chief minister, famously declaring, "I shall be my own prime minister." This marked the beginning of his personal rule and the establishment of an absolute monarchy in France.</p>
+                    
+                    <p>Louis centralized power in his own hands by reducing the influence of the nobility and the parlements. He required the high nobility to reside at court, where he could monitor their activities and keep them occupied with elaborate court etiquette and ceremonies. He also promoted talented individuals from the middle class to positions of power, creating a bureaucracy loyal to him rather than to aristocratic factions.</p>
+                    
+                    <p>The king's daily routine was transformed into a public spectacle, with courtiers competing for the honor of attending his lever (rising ceremony) and coucher (bedtime ceremony). Every aspect of court life revolved around the king, reinforcing his central position in the French state.</p>
+                    
+                    <div class="topic-quote">
+                        "L'État, c'est moi." (I am the state.) — Attributed to Louis XIV
+                    </div>
+                </div>
+                
+                <div class="topic-section">
+                    <h2>The Palace of Versailles</h2>
+                    <p>Perhaps the most enduring symbol of Louis XIV's reign is the Palace of Versailles. What began as a hunting lodge under Louis XIII was transformed by Louis XIV into a magnificent palace that would serve as the seat of government and the royal residence from 1682 until the French Revolution.</p>
+                    
+                    <p>The construction of Versailles was a massive undertaking that spanned decades and employed thousands of workers. The palace was designed to showcase the glory of France and the power of its monarch. Its grand architecture, lavish decoration, and extensive gardens all served to impress visitors and subjects alike.</p>
+                    
+                    <p>By moving the court and government to Versailles, Louis XIV achieved several strategic objectives. He distanced himself from the sometimes hostile Parisian population, created an environment where he could closely monitor the nobility, and established a setting where every aspect of daily life reinforced his authority.</p>
+                    
+                    <div class="topic-fact-box">
+                        <h3>Key Facts about the Palace of Versailles</h3>
+                        <ul>
+                            <li>Construction began in 1661 and continued throughout Louis XIV's reign</li>
+                            <li>The palace contains over 700 rooms and spans more than 63,000 square meters</li>
+                            <li>The Hall of Mirrors, the most famous room in the palace, features 357 mirrors</li>
+                            <li>The gardens cover nearly 800 hectares and include numerous fountains and sculptures</li>
+                            <li>At its height, the palace housed up to 10,000 people, including the royal family, nobles, servants, and government officials</li>
+                            <li>The total cost of Versailles during Louis XIV's reign is estimated at 2 billion livres, a staggering sum for the time</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="topic-section">
+                    <h2>Economic and Administrative Reforms</h2>
+                    <p>Louis XIV appointed Jean-Baptiste Colbert as his Controller-General of Finances in 1665. Colbert implemented a policy of economic management known as mercantilism, which aimed to make France economically self-sufficient and to increase the wealth flowing into the royal treasury.</p>
+                    
+                    <p>Under Colbert's direction, France developed domestic industries, established trading companies for overseas commerce, improved infrastructure through the construction of roads and canals, and reformed the tax system to increase revenue while reducing corruption. Colbert also established academies for the arts and sciences, recognizing their importance for national prestige and economic development.</p>
+                    
+                    <p>Louis XIV also reformed the military, creating a more professional and disciplined force. The introduction of uniforms, standardized training, and a clear chain of command transformed the French army into the most powerful in Europe. The king established military academies and technical schools to train officers and engineers, further professionalizing the armed forces.</p>
+                </div>
+                
+                <div class="topic-section">
+                    <h2>Foreign Policy and Wars</h2>
+                    <p>Louis XIV pursued an aggressive foreign policy aimed at expanding France's borders and establishing French dominance in Europe. His reign was marked by a series of wars, including the War of Devolution (1667-1668), the Franco-Dutch War (1672-1678), the War of the League of Augsburg (1688-1697), and the War of the Spanish Succession (1701-1714).</p>
+                    
+                    <p>These conflicts resulted in territorial gains for France, particularly in the northeast and east, but they also drained the treasury and eventually led to a coalition of European powers united against French expansion. The War of the Spanish Succession, fought over the inheritance of the Spanish throne by Louis's grandson, was particularly costly and ended with the Treaty of Utrecht in 1713, which maintained the balance of power in Europe but recognized Philip V (Louis's grandson) as King of Spain.</p>
+                    
+                    <p>Louis XIV's foreign policy was not limited to military campaigns. He also engaged in diplomatic efforts to extend French influence, supported French colonial expansion in North America, the Caribbean, and India, and promoted French culture and language throughout Europe.</p>
+                </div>
+                
+                <div class="topic-section">
+                    <h2>Religious Policy</h2>
+                    <p>Louis XIV was a devout Catholic who saw religious unity as essential for political stability. His religious policy was marked by increasing intolerance toward Protestants (Huguenots) and Jansenists (Catholics who held certain theological views considered controversial).</p>
+                    
+                    <p>In 1685, Louis revoked the Edict of Nantes, which had granted limited religious freedom to Protestants since 1598. The Edict of Fontainebleau, as the revocation was known, led to the persecution of Protestants and the exodus of an estimated 200,000 Huguenots, many of whom were skilled artisans and merchants. This exodus deprived France of valuable human capital and damaged its economy.</p>
+                    
+                    <p>Louis also had a complex relationship with the papacy. While he defended Catholic orthodoxy within France, he asserted the independence of the French Catholic Church from papal authority through a policy known as Gallicanism. This led to tensions with several popes during his reign.</p>
+                </div>
+                
+                <div class="topic-section">
+                    <h2>Legacy and Impact</h2>
+                    <p>Louis XIV died on September 1, 1715, just four days before his 77th birthday, having reigned for 72 years and 110 days—the longest documented reign of any monarch of a sovereign state in European history. He was succeeded by his five-year-old great-grandson, Louis XV, as all of his sons and grandsons had predeceased him.</p>
+                    
+                    <p>The Sun King's legacy is complex and multifaceted. He transformed France into the dominant power in Europe and established a model of absolute monarchy that would influence rulers throughout the continent. The administrative and military reforms he implemented laid the groundwork for the modern French state.</p>
+                    
+                    <p>Under Louis XIV's patronage, French culture, art, and literature flourished, establishing France as a cultural leader in Europe. The classical style that developed during his reign, with its emphasis on order, clarity, and grandeur, would influence European art and architecture for generations.</p>
+                    
+                    <p>However, Louis's reign also had significant costs. His wars and building projects drained the treasury, leading to financial difficulties that would plague his successors. His religious policies alienated Protestants and drove skilled workers from France. The centralization of power in the monarchy, while effective during his lifetime, created a rigid system that would struggle to adapt to changing circumstances in the 18th century, ultimately contributing to the conditions that led to the French Revolution.</p>
+                    
+                    <p>Despite these criticisms, Louis XIV's reign represents a pivotal period in French history, one that defined France's place in Europe and established patterns of governance, culture, and diplomacy that would endure long after the Sun King's death.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="glass-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>French History</h2>
+                    <p>Exploring the rich tapestry of events that shaped modern France</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../timeline.html">Timeline</a></li>
+                        <li><a href="../gallery.html">Gallery</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p>Email: info@frenchhistory.edu</p>
+                    <p>Phone: +33 1 23 45 67 89</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 French History Project. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
